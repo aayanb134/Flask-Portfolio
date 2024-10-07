@@ -10,10 +10,10 @@ flask-portfolio/
 │ ├── static/ # CSS, JS, images and other static files
 │ ├── templates/ # HTML files
 │ ├── database.csv # csv file to store data (will be replaced with MongoDB)
-│ ├── Dockerfile # Dockerfile for containerizing Flask app
+│ ├── Dockerfile # Dockerfile for containerizing Flask app (coming soon)
 │ ├── requirements.txt # Python dependencies
 │ └── server.py # Flask app entry pointtemplates/ # HTML files
-├── IaC/
+├── IaC/ (also coming soon)
 │ ├── providers.tf # Main Terraform config (provider and region)
 │ ├── variables.tf # Terraform variables
 │ ├── outputs.tf # Terraform outputs
@@ -28,3 +28,7 @@ flask-portfolio/
 ├── .gitignore # Ignore unnecessary files
 └── README.md # Project documentation
 ```
+
+## Architecture
+
+### Coming Soon
