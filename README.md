@@ -1,5 +1,7 @@
 # Flask-Portfolio
 
+This project is a Flask web application containerized with Docker and deployed on AWS using Terraform. The architecture includes a MongoDB database and utilizes various AWS services for scalability and availability.
+
 ## File Structure (Not final)
 
 ```
