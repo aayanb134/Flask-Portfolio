@@ -6,14 +6,14 @@ This project is a Flask web application containerized with Docker and deployed o
 
 ```
 flask-portfolio/
-├── app/
+├── App/
 │ ├── server.py # Flask app entry point
 │ ├── requirements.txt # Python dependencies
 │ ├── Dockerfile # Dockerfile for containerizing Flask app
 │ ├── static/ # CSS, JS, images and other static files
 │ ├── templates/ # HTML files
 │ └── index.html
-├── terraform/
+├── IaC/
 │ ├── providers.tf # Main Terraform config (provider and region)
 │ ├── variables.tf # Terraform variables
 │ ├── outputs.tf # Terraform outputs
