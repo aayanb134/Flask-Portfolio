@@ -7,10 +7,11 @@ This project is a Flask web application containerized with Docker and deployed o
 ```
 flask-portfolio/
 ├── app/
-│ ├── app.py # Flask app entry point
+│ ├── server.py # Flask app entry point
 │ ├── requirements.txt # Python dependencies
 │ ├── Dockerfile # Dockerfile for containerizing Flask app
-│ └── templates/ # HTML files (if using Flask templates)
+│ ├── static/ # CSS, JS, images and other static files
+│ ├── templates/ # HTML files
 │ └── index.html
 ├── terraform/
 │ ├── providers.tf # Main Terraform config (provider and region)
