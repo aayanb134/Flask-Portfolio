@@ -1,5 +1,6 @@
 # Flask-Portfolio
 
+```
 flask-portfolio/
 ├── app/
 │ ├── app.py # Flask app entry point
@@ -21,3 +22,4 @@ flask-portfolio/
 ├── docker-compose.yml # Docker Compose file (MongoDB + Flask app)
 ├── .gitignore # Ignore unnecessary files
 └── README.md # Project documentation
+```
