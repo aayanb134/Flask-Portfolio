@@ -1,5 +1,7 @@
 # Flask-Portfolio
 
+## File Structure (Not final)
+
 ```
 flask-portfolio/
 ├── app/
