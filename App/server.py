@@ -51,3 +51,7 @@ def login():
         return render_template('/thankyou.html', name=name)
     else:
         return redirect('/nope.html')
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
