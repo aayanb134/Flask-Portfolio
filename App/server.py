@@ -51,14 +51,3 @@ def login():
         return render_template('/thankyou.html', name=name)
     else:
         return redirect('/nope.html')
-
-
-# @app.route('/submit_form', methods=['POST', 'GET'])
-# def login():
-#     if request.method == 'POST':
-#         data = request.form.to_dict()
-#         name = data["name"]
-#         write_to_csv(data)
-#         return render_template('/thankyou.html', name=name)
-#     else:
-#         return redirect('/nope.html')
