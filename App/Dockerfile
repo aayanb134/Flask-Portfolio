@@ -18,9 +18,6 @@ RUN apt-get update && apt-get install -y \
 
 COPY requirements.txt .
 
-
-RUN pip3 install --upgrade pip setuptools wheel
-
 RUN pip3 install --no-cache-dir --prefer-binary -r requirements.txt
 
 COPY . .
