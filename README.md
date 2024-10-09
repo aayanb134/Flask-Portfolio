@@ -9,8 +9,8 @@ flask-portfolio/
 ├── App/
 │ ├── static/ # CSS, JS, images and other static files
 │ ├── templates/ # HTML files
-│ ├── database.csv # csv file to store data (will be replaced with MongoDB)
-│ ├── Dockerfile # Dockerfile for containerizing Flask app (coming soon)
+│ ├── database.csv # csv file to store data
+│ ├── Dockerfile # Dockerfile for containerizing Flask app
 │ ├── requirements.txt # Python dependencies
 │ └── server.py # Flask app entry pointtemplates/ # HTML files
 ├── IaC/ (also coming soon)
@@ -22,8 +22,7 @@ flask-portfolio/
 │ ├── alb.tf # Load Balancer configuration
 │ ├── cloudfront.tf # CloudFront distribution setup
 │ ├── route53.tf # Route 53 domain setup
-│ ├── acm.tf # ACM for SSL certificates
-│ └── mongodb.tf # MongoDB integration (Atlas or local)
+│ └── acm.tf # ACM for SSL certificates
 ├── docker-compose.yml # Docker Compose file (MongoDB + Flask app)
 ├── .gitignore # Ignore unnecessary files
 └── README.md # Project documentation
