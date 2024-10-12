@@ -10,21 +10,20 @@ flask-portfolio/
 │ ├── static/ # CSS, JS, images and other static files
 │ ├── templates/ # HTML files
 │ ├── database.csv # csv file to store data
-│ ├── Dockerfile # Dockerfile for containerizing Flask app
 │ ├── requirements.txt # Python dependencies
 │ └── server.py # Flask app entry pointtemplates/ # HTML files
-├── IaC/ (also coming soon)
+├── IaC/
 │ ├── providers.tf # Main Terraform config (provider and region)
 │ ├── variables.tf # Terraform variables
 │ ├── outputs.tf # Terraform outputs
 │ ├── ecs.tf # ECS Cluster, Task Definitions
 │ ├── vpc.tf # VPC, Subnets, Security Groups
 │ ├── alb.tf # Load Balancer configuration
-│ ├── cloudfront.tf # CloudFront distribution setup
 │ ├── route53.tf # Route 53 domain setup
 │ └── acm.tf # ACM for SSL certificates
-├── docker-compose.yml # Docker Compose file (MongoDB + Flask app)
+├── docker-compose.yml # Docker Compose file (coming soon)
 ├── .gitignore # Ignore unnecessary files
+├── Dockerfile # Dockerfile for containerizing Flask app
 └── README.md # Project documentation
 ```
 
