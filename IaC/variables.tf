@@ -15,3 +15,9 @@ variable "app_name" {
   type        = string
   default     = "portfolio"
 }
+
+variable "docker_image_url" {
+  description = "url for docker image"
+  type        = string
+  default     = "value"
+}
