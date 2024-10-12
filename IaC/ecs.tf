@@ -28,7 +28,7 @@ resource "aws_ecs_task_definition" "app" {
   family                   = "flask_app"
   network_mode             = "awsvpc"
   requires_compatibilities = ["FARGATE"]
-  execution_role_arn       = aws_iam_role.ecs-task-role.arn
+  execution_role_arn       = aws_iam_policy.ecs-task-role.arn
   cpu                      = "256"
   memory                   = "512"
 
@@ -69,7 +69,7 @@ resource "aws_ecs_service" "app_service" {
   }
 
   load_balancer {
-    target_group_arn = aws_lb_target_group.flask_tg.arn
+    target_group_arn = aws_lb_target_group.flask-app-tg.arn
     container_name   = "flask-container"
     container_port   = 5000
   }
