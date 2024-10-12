@@ -19,5 +19,5 @@ variable "app_name" {
 variable "docker_image_url" {
   description = "url for docker image"
   type        = string
-  default     = "value"
+  default     = "257747315190.dkr.ecr.eu-west-2.amazonaws.com/flask-app:latest"
 }
