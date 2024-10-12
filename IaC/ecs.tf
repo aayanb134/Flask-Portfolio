@@ -2,24 +2,25 @@ resource "aws_ecs_cluster" "app" {
   name = "app-cluster"
 }
 
-resource "aws_iam_role" "ecs-task-role" {
-  name = "ecs-task-role"
-  assume_role_policy = jsonencode({
+resource "aws_iam_policy" "ecs-task-role" {
+  name        = "ecs-task-role"
+  description = "Policy to allow ECS tasks to retrieve secrets and assume roles"
+
+  policy = jsonencode({
     Version = "2012-10-17"
     Statement = [
       {
-        Effect = "Allow"
-        Principal = {
-          Service = "ecs-tasks.amazonaws.com"
-        }
-        Action = "sts:AssumeRole"
+        Effect   = "Allow"
+        Action   = "secretsmanager:GetSecretValue"
+        Resource = "arn:aws:secretsmanager:eu-west-2:257747315190:secret:MAIL_User_Pass"
+      },
+      {
+        Effect   = "Allow"
+        Action   = "sts:AssumeRole"
+        Resource = "arn:aws:iam::257747315190:role/ecs-task-role"
       }
     ]
   })
-
-  managed_policy_arns = [
-    "arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy"
-  ]
 }
 
 
@@ -35,6 +36,16 @@ resource "aws_ecs_task_definition" "app" {
     name      = "flask_container"
     image     = var.docker_image_url
     essential = true
+    secrets = [
+      {
+        name      = "MAIL_USERNAME"
+        valueFrom = "arn:aws:secretsmanager:eu-west-2:257747315190:secret:MAIL_User_Pass-ZkmFgL"
+      },
+      {
+        name      = "MAIL_PASSWORD"
+        valueFrom = "arn:aws:secretsmanager:eu-west-2:257747315190:secret:MAIL_User_Pass-ZkmFgL"
+      }
+    ]
     portMappings = [
       {
         containerPort = 5000
