@@ -12,6 +12,8 @@ module "acm" {
   domain_name = "aayan-resume.com"
   zone_id     = "Z08142412D2LIYVLOF838"
 
+  validation_method = "DNS"
+
   wait_for_validation = true
 
   tags = {
